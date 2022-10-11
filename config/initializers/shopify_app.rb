@@ -10,8 +10,8 @@ ShopifyApp.configure do |config|
 
   config.reauth_on_access_scope_changes = true
 
-  config.api_key = ENV.fetch('SHOPIFY_API_KEY', 'b7c43edff7c77809dbe1096a5fb095b6').presence
-  config.secret = ENV.fetch('SHOPIFY_API_SECRET', '0e058db6bf90a49fd7361138406900f9').presence
+  config.api_key = ENV.fetch('SHOPIFY_API_KEY', 'f8df25581c2d78b8e416e92f97bc7688').presence
+  config.secret = ENV.fetch('SHOPIFY_API_SECRET', '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').presence
 
   if defined? Rails::Server
     raise('Missing SHOPIFY_API_KEY. See https://github.com/Shopify/shopify_app#requirements') unless config.api_key
