@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_14_140407) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_11_173708) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "customshippingrates", force: :cascade do |t|
+    t.string "nombre_tarifa"
+    t.string "comuna"
+    t.string "etiqueta"
+    t.float "precio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "shops", force: :cascade do |t|
     t.string "shopify_domain", null: false

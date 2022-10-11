@@ -1,0 +1,2 @@
+class Customshippingrate < ApplicationRecord
+end

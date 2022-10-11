@@ -1,0 +1,37 @@
+<%= form_with(model: customshippingrate) do |form| %>
+  <% if customshippingrate.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(customshippingrate.errors.count, "error") %> prohibited this customshippingrate from being saved:</h2>
+
+      <ul>
+        <% customshippingrate.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre_tarifa, style: "display: block" %>
+    <%= form.text_field :nombre_tarifa %>
+  </div>
+
+  <div>
+    <%= form.label :comuna, style: "display: block" %>
+    <%= form.text_field :comuna %>
+  </div>
+
+  <div>
+    <%= form.label :etiqueta, style: "display: block" %>
+    <%= form.text_field :etiqueta %>
+  </div>
+
+  <div>
+    <%= form.label :precio, style: "display: block" %>
+    <%= form.text_field :precio %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

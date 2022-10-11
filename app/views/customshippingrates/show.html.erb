@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @customshippingrate %>
+
+<div>
+  <%= link_to "Edit this customshippingrate", edit_customshippingrate_path(@customshippingrate) %> |
+  <%= link_to "Back to customshippingrates", customshippingrates_path %>
+
+  <%= button_to "Destroy this customshippingrate", @customshippingrate, method: :delete %>
+</div>

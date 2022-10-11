@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Customshippingrates</h1>
+
+<div id="customshippingrates">
+  <% @customshippingrates.each do |customshippingrate| %>
+    <%= render customshippingrate %>
+    <p>
+      <%= link_to "Show this customshippingrate", customshippingrate %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New customshippingrate", new_customshippingrate_path %>
